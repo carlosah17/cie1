@@ -33,7 +33,7 @@ public class Principal7 {
 	
 	public static int numeroMenor(int[] miArray) {
 
-		int menor = miArray[0];
+		int menor = Integer.MAX_VALUE;
 
 		for (int i = 0; i < miArray.length; i++) {
 
