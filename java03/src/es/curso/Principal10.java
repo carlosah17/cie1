@@ -1,4 +1,7 @@
 package es.curso;
+
+import es.curso.negocio.Persona;
+
 public class Principal10 {
 	public static void main(String[] args) {
 		
