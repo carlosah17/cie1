@@ -2,7 +2,7 @@ package es.curso1;
 
 import es.curso.negocio.Persona;
 
-public class Principal3 {
+public class Principal4 {
 
 	public static void main(String[] args) {
 		
@@ -20,16 +20,18 @@ public class Principal3 {
 		Persona[] lista= new Persona[2];
 		lista[0]=p1;
 		lista[1]=p2;
-		int suma=0;
+		double suma=0;
+		//int contador=0;
 		for (int i=0;i<lista.length;i++) {
 			
 			System.out.println(lista[i].edad);
 			System.out.println(lista[i].nombre);
 			suma=suma+lista[i].edad;
-			//suma+=lista[i].edad;
+			//contador++;
 		}
 		System.out.println("********");
-		System.out.println(suma);
+		//System.out.println(contador);
+		System.out.println(suma/lista.length);
 		
 		
 	
