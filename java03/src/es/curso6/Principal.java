@@ -15,6 +15,14 @@ public class Principal {
 		
 		Ordenador o= new Ordenador(m1,cpu1);
 		
+		// la clase turista y la clase maleta
+		// el turista tiene nombre 
+		// y las maletas tienen modelo y peso
+		//un turista puede llevar 2 maletas
+		//cuanto peso soporta el turista
+		
+		
+		
 
 	}
 
