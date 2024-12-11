@@ -46,25 +46,14 @@ public class Turista {
 	}
 
 	public double pesoTotal(double sobrePeso) {
-		double pesoTotal = 0;
-		if (maleta1 != null)
-			pesoTotal = pesoTotal + maleta1.getPeso();
-		if (maleta2 != null)
-			pesoTotal = pesoTotal + maleta2.getPeso();
+		
 
-		return pesoTotal + sobrePeso;
+		return pesoTotal() + sobrePeso;
 	}
 
 	public double pesoTotal(String tipoCarcasa) {
-		double pesoTotal = 0;
-		if (maleta1 != null)
-			pesoTotal = pesoTotal + maleta1.getPeso();
-		if (maleta2 != null)
-			pesoTotal = pesoTotal + maleta2.getPeso();
+		double pesoTotal = pesoTotal();
 		
-		//si el tipo de carcasa que paso pone "ligera"
-		//en el texto añado 2 kg
-		//sino añado 4 kg;
 		if (tipoCarcasa.equals("ligera")) {
 			pesoTotal = pesoTotal + 2;
 		} else {
