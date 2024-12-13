@@ -10,6 +10,14 @@ public class DeportistaPro extends Deportista {
 	}
 	
 	
+	@Override
+	public void andar() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("anda a 9 km/hora");
+	}
+
+
 	public DeportistaPro(String nombre, int edad, String deporte, int nivel) {
 		super(nombre, edad, deporte);
 		this.nivel = nivel;

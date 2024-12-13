@@ -31,6 +31,10 @@ public class Persona {
 		this.nombre = nombre;
 		this.edad=edad;
 	}
+	
+	public void andar() {
+		System.out.println("anda a 5 km/hora");
+	}
 
 
 }
