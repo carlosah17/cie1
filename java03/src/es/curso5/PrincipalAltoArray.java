@@ -20,6 +20,17 @@ public class PrincipalAltoArray {
 		}
 
 		System.out.println(mayor);
+		
+	
 	}
 
-}
+}	
+
+
+
+
+
+
+
+
+

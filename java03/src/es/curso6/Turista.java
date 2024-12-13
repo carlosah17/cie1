@@ -1,18 +1,11 @@
 package es.curso6;
 
-public class Turista {
+public class Turista extends SuperTurista{
 
-	private String nombre;
+	
 	private Maleta maleta1;
 	private Maleta maleta2;
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
 	public Maleta getMaleta1() {
 		return maleta1;
@@ -31,8 +24,7 @@ public class Turista {
 	}
 
 	public Turista(String nombre) {
-		super();
-		this.nombre = nombre;
+		this.setNombre(nombre);
 	}
 
 	public double pesoTotal() {
