@@ -10,7 +10,7 @@ public class Principal5 {
 
 	public static void main(String[] args) {
 
-		Path ruta = Paths.get("holaaaaa.txt");
+		Path ruta = Paths.get("hola.txt");
 
 		try {
 			List<String> lineas = Files.readAllLines(ruta);
