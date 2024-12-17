@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class PersonaRepository {
+public class PersonaRepositoryVieja {
 
 	static final String DB_URL = "jdbc:mysql://localhost:8889/cie1";
 	static final String USER = "root";
@@ -24,5 +24,24 @@ public class PersonaRepository {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void borrar(String nombre) {
+
+		try {
+			Connection conexion = DriverManager.getConnection(DB_URL, USER, PASS);
+			Statement sentencia = conexion.createStatement();
+
+			String consultaBorrar = "delete from Personas where nombre='" + nombre + "'";
+
+			System.out.println(consultaBorrar);
+
+			sentencia.executeUpdate(consultaBorrar);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
