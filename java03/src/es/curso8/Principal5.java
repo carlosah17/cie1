@@ -23,6 +23,8 @@ public class Principal5 {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 			System.out.println("hola majo que no va no hay fichero");
+		}finally {
+			System.out.println("cerrar");
 		}
 
 	}
