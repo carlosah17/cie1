@@ -4,8 +4,9 @@ public class Principal7 {
 
 	public static void main(String[] args) {
 		
-		PersonaRepositoryVieja repo= new PersonaRepositoryVieja();
-		repo.borrar("pepe");
+		PersonaRepositoryNueva repo= new PersonaRepositoryNueva();
+		Persona p= new Persona( "juanito1","gomez1",20);
+		repo.insertar(p);
 
 	}
 
