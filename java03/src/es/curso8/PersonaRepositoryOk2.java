@@ -5,8 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-public class PersonaRepositoryOk {
+public class PersonaRepositoryOk2 {
 
 	static final String DB_URL = "jdbc:mysql://localhost:8889/cie1";
 	static final String USER = "root";
@@ -47,10 +48,11 @@ public class PersonaRepositoryOk {
 
 	}
 
-	public ResultSet buscarTodos() {
+	public ArrayList<Persona> buscarTodos() {
 
 		ResultSet rs=null;
 		Connection conexion=null;
+		ArrayList<Persona> lista= new ArrayList<Persona>();
 		try {
 			//conecto a la base de datos
 			conexion = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -58,6 +60,13 @@ public class PersonaRepositoryOk {
 			Statement sentencia = conexion.createStatement();
 			//ejecuto
 			rs = sentencia.executeQuery("select * from Personas");
+			while (rs.next()) {
+				
+				Persona p= new Persona(rs.getString("nombre"),
+						rs.getString("apellidos"), rs.getInt("edad"));
+				
+				lista.add(p);
+			}
 			
 			
 		} catch (SQLException e) {
@@ -74,7 +83,7 @@ public class PersonaRepositoryOk {
 				}
 			}
 		}
-		return rs;
+		return lista;
 	}
 	
 	
